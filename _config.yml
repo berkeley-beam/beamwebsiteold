@@ -30,3 +30,4 @@ gems:
   - jekyll-bootstrap-sass
 bootstrap:
   assets: true
+
