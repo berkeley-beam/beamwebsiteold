@@ -55,320 +55,87 @@ layout: default
 <div class="panel">
   <div class="content">
     <center><h1>Our Team</h1></center>
+      <div id="tiles">
+      </div>
+	  <script>
+	  	  //List of all staff members.
+		  //[Name, Major/Yr, Committees, img filename (place in image folder, no file extension necessary)]
+		  var data = [
+		  	["Alison Mathews", "CivilE 2019", "Logistics, Site Leading", "alison"], 
+			["Alma Chen", "Econ & Stats 2017", "External Affairs", "alma"], 
+			["Angie Lin", "Math & Econ 2017", "Logistics", "angie"], 
+			["Ashlee Hueston", "BioE 2019", "Logistics", "ashlee"], 
+			["Ashley Chen", "Physics & Art History 2018", "Curriculum,  Logistics", "ashley"], 
+			["Bernardo Gouveia", "ChemE 2017", "President,  Site Leading", "bernardo"], 
+			["Bonnie Su", "MCB 2017", "Curriculum,  Site Leading", "bonnies"], 
+			["Bonnie Lin", "MEB 2017", "Logistics,  Outreach", "bonniel"], 
+			["Brian Shing", "MCB 2017", "Site Leading", "blank"], 
+			["Carilyn Sun", "Stats 2017", "External Affairs,  Logistics", "carilyn"], 
+			["Caroline Wilcox", "MechE 2017", "President,  Alternate Site Leading", "caroline"], 
+			["Cynthia Lee", "Environmental Sciences & Society and Environment 2018", "Site Leading", "cynthia"], 
+			["Deepika Sarode", "MCB 2018", "Curriculum", "deepika"], 
+			["Ian Ferguson", "MCB & Math 2017", "Site Leading", "ian"], 
+			["Kuan Chang", "EECS 2017", "Site Leading,  Curriculum", "kuan"], 
+			["Kevin Arifin", "EECS 2018", "External Affairs,  Mentor Development,  Site Leading", "kevin"], 
+			["Lani Hack", "ChemE 2017", "Outreach,  Site Leading", "lani"], 
+			["Lindsey Zhang", "Chemical Biology 2017", "Curriculum,  Alternate Site Leading", "lindsey"], 
+			["Matthew Sit", "BioE & EECS 2019", "Curriculum,  External Affairs", "matt"], 
+			["Melody Wei", "MCB 2017", "Logistics,  Site Leading", "melody"], 
+			["Nandika Donthi", "CS 2019", "Curriculum,  External Affairs", "nandika"], 
+			["Nicholas Lin", "CS & Stats 2017", "Outreach,  Site Leading", "nicholas"], 
+			["Nicole Rasquinha", "EECS 2018", "Site Leading", "nicole"], 
+			["Patrick Zhang", "ChemE 2018", "External Affairs,  Outreach,  Alternate Site Leading", "patrickz"], 
+			["Patrick Oare", "Physics & Math 2019", "Curriculum,  Site Leading", "patricko"], 
+			["Pavan Muddukrishna", "Astrophysics & Applied Math 2018", "Mentor Development,  Site Leading", "pavan"], 
+			["Perez Lowery", "CogSci 2017", "Outreach", "perez"], 
+			["Rachel Jang", "ChemE 2019", "Curriculum,  External Affairs", "rachel"], 
+			["Ria Someshwar", "ChemE 2018", "Mentor Development", "ria"], 
+			["Rohan Chakraborty", "ChemE 2019", "Mentor Development, Site Leading", "rohan"], 
+			["Rosalind Bump", "MEB 2017", "Curriculum, Outreach", "rosalind"], 
+			["Stephanie Liu", "MSE 2018", "Mentor Development, Outreach", "stephanie"], 
+			["Tiffany Ma", "MCB 2017", "Curriculum, Alternate Site Leading", "tiffany"], 
+			["Varun Chhabra", "MechE 2018", "Curriculum", "varun"], 
+			["Vicky Zhang", "EECS 2018", "External Affairs, Mentor Development, Site Leading", "vicky"], 
+			["Wayne Li", "Chem & CS 2019", "Outreach, Site Leading", "wayne"], 
+			["Yessica Wiryawan", "ChemE 2017", "External Affairs", "yessica"], 
+			["Zachary Goldstein", "CogSci 2017", "Mentor Development", "zach"]
+		  ];
+		  //Categories representing committees.
+		  //[Title to be matched, image and css name (place img in image folder, no file extension neccessary)]
+		  var sortCategories = [
+		  	["President", "president"],
+			["Curriculum", "curriculum"],
+			["External", "external"],
+			["Logistics", "logistics"],
+			["Mentor Dev", "mentordev"],
+			["Site Leading", "siteleading"],
+			["Outreach", "outreach"]
+		  ];
+		  var htmlExpr = '<div class=\"container-row\">';
 
-    <div class="container-row">
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Bernardo Gouveia</h2></b>
-          <h4>ChemE 2017</h4>
-          <h4>President, Site Leading</h4>
-        </div>
-        <img src="images/bernardo.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Caroline Wilcox</h2></b>
-          <h4>MechE 2017</h4>
-          <h4>President, Site Leading</h4>
-        </div>
-        <img src="images/caroline.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Ian Ferguson</h2></b>
-          <h4>MCB & Math 2017</h4>
-          <h4>Site Leading</h4>
-        </div>
-        <img src="images/ian.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Kevin Arifin</h2></b>
-          <h4>EECS 2018</h4>
-          <h4>External Affairs, Mentor Dev, Site Leading</h4>
-        </div>
-        <img src="images/kevin.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Alma Chen</h2></b>
-          <h4>Econ & Stats 2017</h4>
-          <h4>External Affairs</h4>
-        </div>
-        <img src="images/alma.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Varun Chhabra</h2></b>
-          <h4>MechE 2018</h4>
-          <h4>Curriculum</h4>
-        </div>
-        <img src="images/varun.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Cynthia Lee</h2></b>
-          <h4>Environmental Sciences & Society and Environment 2018</h4>
-          <h4>Site Leading</h4>
-        </div>
-        <img src="images/cynthia.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Zach Goldstein</h2></b>
-          <h4>Cognitive Science 2017</h4>
-          <h4>Mentor Dev</h4>
-        </div>
-        <img src="images/zach.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Wayne Li</h2></b>
-          <h4>Computer Science 2018</h4>
-          <h4>Outreach, Site Leading</h4>
-        </div>
-        <img src="images/wayne.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Melody Wei</h2></b>
-          <h4>MCB 2017</h4>
-          <h4>Logistics, Site Leading</h4>
-        </div>
-        <img src="images/melody.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Vicky Zhang</h2></b>
-          <h4>EECS 2018</h4>
-          <h4>External Affairs, Mentor Dev, Site Leading</h4>
-        </div>
-        <img src="images/vicky.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Kuan Chang</h2></b>
-          <h4>EECS 2017</h4>
-          <h4>Curriculum, Site Leading</h4>
-        </div>
-        <img src="images/kuan.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Lindsey Zhang</h2></b>
-          <h4>Chemical Biology 2017</h4>
-          <h4>Curriculum, Site Leading</h4>
-        </div>
-        <img src="images/lindsey.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Lani Hack</h2></b>
-          <h4>ChemE 2017</h4>
-          <h4>Outreach, Site Leading</h4>
-        </div>
-        <img src="images/lani.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Matt Sit</h2></b>
-          <h4>BioE 2019</h4>
-          <h4>Curriculum, External Affairs</h4>
-        </div>
-        <img src="images/matt.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Rachel Jang</h2></b>
-          <h4>ChemE 2019</h4>
-          <h4>Curriculum, External Affairs</h4>
-        </div>
-        <img src="images/rachel.jpg">
-      </div>
-      <!--  <div id="staff">
-        <div id="staff-text">
-          <b><h2>Kevin Arifin</h2></b>
-          <h4>EECS 2018</h4>
-          <h4>External Affairs, Mentor Dev, Site Leading</h4>
-        </div>
-        <img src="images/kevin.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Kevin Arifin</h2></b>
-          <h4>EECS 2018</h4>
-          <h4>External Affairs, Mentor Dev, Site Leading</h4>
-        </div>
-        <img src="images/kevin.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Kevin Arifin</h2></b>
-          <h4>EECS 2018</h4>
-          <h4>External Affairs, Mentor Dev, Site Leading</h4>
-        </div>
-        <img src="images/kevin.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Kevin Arifin</h2></b>
-          <h4>EECS 2018</h4>
-          <h4>External Affairs, Mentor Dev, Site Leading</h4>
-        </div>
-        <img src="images/kevin.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Kevin Arifin</h2></b>
-          <h4>EECS 2018</h4>
-          <h4>External Affairs, Mentor Dev, Site Leading</h4>
-        </div>
-        <img src="images/kevin.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Kevin Arifin</h2></b>
-          <h4>EECS 2018</h4>
-          <h4>External Affairs, Mentor Dev, Site Leading</h4>
-        </div>
-        <img src="images/kevin.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Kevin Arifin</h2></b>
-          <h4>EECS 2018</h4>
-          <h4>External Affairs, Mentor Dev, Site Leading</h4>
-        </div>
-        <img src="images/kevin.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Kevin Arifin</h2></b>
-          <h4>EECS 2018</h4>
-          <h4>External Affairs, Mentor Dev, Site Leading</h4>
-        </div>
-        <img src="images/kevin.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Kevin Arifin</h2></b>
-          <h4>EECS 2018</h4>
-          <h4>External Affairs, Mentor Dev, Site Leading</h4>
-        </div>
-        <img src="images/kevin.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Kevin Arifin</h2></b>
-          <h4>EECS 2018</h4>
-          <h4>External Affairs, Mentor Dev, Site Leading</h4>
-        </div>
-        <img src="images/kevin.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Kevin Arifin</h2></b>
-          <h4>EECS 2018</h4>
-          <h4>External Affairs, Mentor Dev, Site Leading</h4>
-        </div>
-        <img src="images/kevin.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Kevin Arifin</h2></b>
-          <h4>EECS 2018</h4>
-          <h4>External Affairs, Mentor Dev, Site Leading</h4>
-        </div>
-        <img src="images/kevin.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Kevin Arifin</h2></b>
-          <h4>EECS 2018</h4>
-          <h4>External Affairs, Mentor Dev, Site Leading</h4>
-        </div>
-        <img src="images/kevin.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Kevin Arifin</h2></b>
-          <h4>EECS 2018</h4>
-          <h4>External Affairs, Mentor Dev, Site Leading</h4>
-        </div>
-        <img src="images/kevin.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Kevin Arifin</h2></b>
-          <h4>EECS 2018</h4>
-          <h4>External Affairs, Mentor Dev, Site Leading</h4>
-        </div>
-        <img src="images/kevin.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Kevin Arifin</h2></b>
-          <h4>EECS 2018</h4>
-          <h4>External Affairs, Mentor Dev, Site Leading</h4>
-        </div>
-        <img src="images/kevin.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Kevin Arifin</h2></b>
-          <h4>EECS 2018</h4>
-          <h4>External Affairs, Mentor Dev, Site Leading</h4>
-        </div>
-        <img src="images/kevin.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Kevin Arifin</h2></b>
-          <h4>EECS 2018</h4>
-          <h4>External Affairs, Mentor Dev, Site Leading</h4>
-        </div>
-        <img src="images/kevin.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Kevin Arifin</h2></b>
-          <h4>EECS 2018</h4>
-          <h4>External Affairs, Mentor Dev, Site Leading</h4>
-        </div>
-        <img src="images/kevin.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Kevin Arifin</h2></b>
-          <h4>EECS 2018</h4>
-          <h4>External Affairs, Mentor Dev, Site Leading</h4>
-        </div>
-        <img src="images/kevin.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Kevin Arifin</h2></b>
-          <h4>EECS 2018</h4>
-          <h4>External Affairs, Mentor Dev, Site Leading</h4>
-        </div>
-        <img src="images/kevin.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Kevin Arifin</h2></b>
-          <h4>EECS 2018</h4>
-          <h4>External Affairs, Mentor Dev, Site Leading</h4>
-        </div>
-        <img src="images/kevin.jpg">
-      </div>
-      <div id="staff">
-        <div id="staff-text">
-          <b><h2>Kevin Arifin</h2></b>
-          <h4>EECS 2018</h4>
-          <h4>External Affairs, Mentor Dev, Site Leading</h4>
-        </div>
-        <img src="images/kevin.jpg">
-      </div> -->
+		  //Loop through each category and display all associated staff for each.
+		  for (var k = 0; k < sortCategories.length; k++) {
+			  htmlExpr += '<div id=\"staff\"><img src=';
+			  htmlExpr += 'images/' + sortCategories[k][1] + '.jpg';
+			  htmlExpr += '></div>';
+			  for (var i = 0; i < data.length; i++) {
+				  if (data[i][2].toString().includes(sortCategories[k][0])) {
+					  //CSS Setup
+					  htmlExpr += '<div id=\"staff\">';
+					  htmlExpr += '<div id=\"' + sortCategories[k][1] + '-text\">';
+					  //Name
+					  htmlExpr += '<b><h2>' + data[i][0] + '</h2></b>';
+					  //Major/Year
+					  htmlExpr += '<h4>' + data[i][1] + '</h4>';
+					  //Committees
+					  htmlExpr += '<h4>' + data[i][2] + '</h4></div>';
+					  //Display image
+					  htmlExpr += '<img src=images/' + data[i][3] + '.jpg></div>';
+				  }
+			  }
+		  }
+		  htmlExpr += '</div>';
+		  document.getElementById("tiles").innerHTML += htmlExpr;
+      </script>
     </div>
-  </div>
 </div>
