@@ -111,31 +111,31 @@ layout: default
 			["Site Leading", "siteleading"],
 			["Outreach", "outreach"]
 		  ];
-		  var strLinks = '<div class=\"container-row\">';
+		  var htmlExpr = '<div class=\"container-row\">';
 
 		  //Loop through each category and display all associated staff for each.
-		  for (var cat = 0; cat < sortCategories.length; cat++) {
-			  strLinks += '<div id=\"staff\"><img src=';
-			  strLinks += 'images/' + sortCategories[cat][1] + '.jpg';
-			  strLinks += '></div>';
+		  for (var k = 0; k < sortCategories.length; k++) {
+			  htmlExpr += '<div id=\"staff\"><img src=';
+			  htmlExpr += 'images/' + sortCategories[k][1] + '.jpg';
+			  htmlExpr += '></div>';
 			  for (var i = 0; i < data.length; i++) {
-				  if (data[i][2].toString().includes(sortCategories[cat][0])) {
+				  if (data[i][2].toString().includes(sortCategories[k][0])) {
 					  //CSS Setup
-					  strLinks += '<div id=\"staff\">';
-					  strLinks += '<div id=\"' + sortCategories[cat][1] + '-text\">';
+					  htmlExpr += '<div id=\"staff\">';
+					  htmlExpr += '<div id=\"' + sortCategories[k][1] + '-text\">';
 					  //Name
-					  strLinks += '<b><h2>' + data[i][0] + '</h2></b>';
+					  htmlExpr += '<b><h2>' + data[i][0] + '</h2></b>';
 					  //Major/Year
-					  strLinks += '<h4>' + data[i][1] + '</h4>';
+					  htmlExpr += '<h4>' + data[i][1] + '</h4>';
 					  //Committees
-					  strLinks += '<h4>' + data[i][2] + '</h4></div>';
+					  htmlExpr += '<h4>' + data[i][2] + '</h4></div>';
 					  //Display image
-					  strLinks += '<img src=images/' + data[i][3] + '.jpg></div>';
+					  htmlExpr += '<img src=images/' + data[i][3] + '.jpg></div>';
 				  }
 			  }
 		  }
-		  strLinks += '</div>';
-		  document.getElementById("tiles").innerHTML += strLinks;
+		  htmlExpr += '</div>';
+		  document.getElementById("tiles").innerHTML += htmlExpr;
       </script>
     </div>
 </div>
