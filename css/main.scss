@@ -122,4 +122,14 @@ footer {
   background-color: rgba(51,125,255, 0.69);
 }
 
+.lesson-container {
+  margin: auto;
+  justify-content: space-around;
+  width: 69%;
+  flex-wrap: wrap;
+  display: flex;
+}
+.thumbnail {
+  flex-basis: 300px;
+}
 
