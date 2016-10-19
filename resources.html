@@ -18,7 +18,7 @@ layout: default
       html += '<div class="caption">';
       html += '<h3>' + lessonTitles[i] + '</h3>';
       html += '<p>' + lessonSubtitles[i] + '</p>';
-      html += '<p><a href="lessons_archive/' + lessons[i] + '.pdf" target="_blank" class="btn btn-primary" role="button">View</a></p>'
+      html += '<p><a id="lesson-link" href="lessons_archive/' + lessons[i] + '.pdf" target="_blank" class="btn btn-primary" role="button">View</a></p>'
       html += '</div></div>'
     }
     document.getElementById("lesson-container").innerHTML += html
