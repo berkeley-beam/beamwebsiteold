@@ -35,7 +35,54 @@ layout: default
                     You can find us at 18 elementary and middle schools in the Berkeley
                     and Oakland area, teaching over 300 students a week.
                 </h4>
-                <br>
+            </div>
+            <div class="home-card even-card">
+                <img src="/images/home-2.jpg" alt="site">
+            </div>
+        </div>
+        <div>
+            <div id="map"></div>
+            <script>
+                function initMap() {
+                    var schools = [
+                        [{lat: 37.876880, lng: -122.270470}, 'Berkeley Arts Magnet'],
+                        [{lat: 37.845693, lng: -122.251162}, 'Claremont'],
+                        [{lat: 37.894072, lng: -122.267788}, 'Cragmont'],
+                        [{lat: 37.861041, lng: -122.250278}, 'Emerson'],
+                        [{lat: 37.775887, lng: -122.211728}, 'Eres'],
+                        [{lat: 37.879118, lng: -122.284307}, 'Jefferson'],
+                        [{lat: 37.857434, lng: -122.245020}, 'John Muir'],
+                        [{lat: 37.857790, lng: -122.262296}, 'Leconte'],
+                        [{lat: 37.852495, lng: -122.273586}, 'Malcolm X'],
+                        [{lat: 37.881533, lng: -122.276955}, 'Martin Luther King Jr.'],
+                        [{lat: 37.845218, lng: -122.284405}, 'Maynard'],
+                        [{lat: 37.865577, lng: -122.294611}, 'Rosa Parks'],
+                        [{lat: 37.892526, lng: -122.280735}, 'Thousand Oaks'],
+                        [{lat: 37.866605, lng: -122.273096}, 'Washington Berkeley'],
+                        [{lat: 37.859633, lng: -122.258597}, 'Willard']
+                    ];
+                    var map = new google.maps.Map(document.getElementById("map"), {
+                        zoom: 13,
+                        center: {lat: 37.872001, lng: -122.258754}
+                    });
+                    var infowindow = new google.maps.InfoWindow();
+                    for (var i = 0; i < schools.length; i++) {
+                        var marker = new google.maps.Marker({
+                            position: schools[i][0],
+                            map: map
+                        });
+                        // Multiple InfoWindow Credit: http://stackoverflow.com/questions/11106671/google-maps-api-multiple-markers-with-infowindows
+                        google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){
+                            return function() {
+                                infowindow.setContent(content);
+                                infowindow.open(map,marker);
+                            };
+                        })(marker,schools[i][1],infowindow));
+                    }
+                }
+            </script>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOf4wsgtXk-J65KiHRXdXW2Oi2dmbh4Bs&callback=initMap"></script>
+            <div class="home-section-content" style="background: #7ccb8e">
                 <ul>
                     <li>Berkeley Arts Magnet (BAM)</li>
                     <li>Claremont</li>
@@ -53,9 +100,6 @@ layout: default
                     <li>Washington Berkeley</li>
                     <li>Willard</li>
                 </ul>
-            </div>
-            <div class="home-card even-card">
-                <img src="/images/home-2.jpg" alt="site">
             </div>
         </div>
     </div>
