@@ -181,7 +181,6 @@ footer {
     position: absolute;
     bottom: 10px;
     left: 20px;
-
 }
 
 .home-section-content {
@@ -240,6 +239,13 @@ footer {
 
 .mobile-home-section {
     display: none;
+}
+
+#map {
+    width: 40%;
+    height: 400px;
+    display: inline-block;
+    vertical-align: middle
 }
 
 @media(max-width: 950px) {
