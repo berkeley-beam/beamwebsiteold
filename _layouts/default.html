@@ -82,10 +82,18 @@
   {{ content }}
 
   <footer>
-      Copyright &copy; 2016 Berkeley Engineers and Mentors.
-      <!-- ASUC Student Union Lead Center requires the follow statement. -->
-      We are a student group acting independently of the University of California.
-      We take full responsibility for our organization and this website.
+        <div id="foot">
+        Copyright &copy; #### Berkeley Engineers and Mentors.
+        <!-- ASUC Student Union Lead Center requires the follow statement. -->
+        We are a student group acting independently of the University of California.
+        We take full responsibility for our organization and this website.
+        </div>
+
+        <!-- Add current year to copyright statement. -->
+        <script>
+            document.getElementById("foot").innerHTML = document.getElementById("foot").innerHTML.replace("####", new Date().getFullYear());
+        </script>
   </footer>
+
  </body>
 </html>
