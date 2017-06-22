@@ -59,50 +59,63 @@ layout: default
 	  	  //List of all staff members.
 		  //[Name, Major/Yr, Committees, img filename (place in image folder, no file extension necessary)]
 		  var data = [
-		    ["Bernardo Gouveia", "ChemE 2017", "President,  Site Leading", "bernardo"],
-			["Caroline Wilcox", "MechE 2017", "President,  Site Leading", "caroline"],
-			["Alison Mathews", "CivilE 2019", "Logistics, Site Leading", "alison"],
-			["Alma Chen", "Econ & Stats 2017", "External Affairs", "alma"],
-			["Angie Lin", "Math & Econ 2017", "Logistics", "angie"],
-			["Ashlee Heuston", "BioE 2019", "Logistics", "ashlee"],
-			["Ashley Chen", "Physics & Art History 2018", "Curriculum,  Logistics", "ashley"],
-			["Bonnie Su", "MCB 2017", "Curriculum,  Site Leading", "bonnies"],
-			["Bonnie Lin", "MEB 2017", "Logistics,  Outreach", "bonniel"],
-			["Brian Shing", "MCB 2017", "Site Leading", "blank"],
-			["Carilyn Sun", "Stats 2017", "External Affairs,  Logistics", "carilyn"],
-			["Cynthia Lee", "Environmental Sciences & Society and Environment 2018", "Site Leading", "cynthia"],
-			["Deepika Sarode", "MCB 2018", "Curriculum", "deepika"],
-			["Ian Ferguson", "MCB & Math 2017", "Site Leading", "ian"],
-			["Kuan Chang", "EECS 2017", "Site Leading,  Curriculum", "kuan"],
-			["Kevin Arifin", "EECS 2018", "External Affairs,  Mentor Development,  Site Leading", "kevin"],
-			["Lani Hack", "ChemE 2017", "Outreach,  Site Leading", "lani"],
-			["Lindsey Zhang", "Chemical Biology 2017", "Curriculum,  Site Leading", "lindsey"],
-			["Matthew Sit", "BioE & EECS 2019", "Curriculum,  External Affairs", "matt"],
-			["Melody Wei", "MCB 2017", "Logistics,  Site Leading", "melody"],
-			["Nandika Donthi", "CS 2019", "Curriculum,  External Affairs", "nandika"],
-			["Nicholas Lin", "CS & Stats 2017", "Outreach,  Site Leading", "nicholas"],
-			["Nicole Rasquinha", "EECS 2018", "Site Leading", "nicole"],
-			["Patrick Zhang", "ChemE 2018", "External Affairs,  Outreach,  Site Leading", "patrickz"],
-			["Patrick Oare", "Physics & Math 2019", "Curriculum,  Site Leading", "patricko"],
-			["Pavan Muddukrishna", "Astrophysics & Applied Math 2018", "Mentor Development,  Site Leading", "pavan"],
-			["Perez Lowery", "CogSci 2017", "Outreach", "perez"],
-			["Rachel Jang", "ChemE 2019", "Curriculum,  External Affairs", "rachel"],
-			["Ria Someshwar", "ChemE 2018", "Mentor Development", "ria"],
-			["Rohan Chakraborty", "ChemE 2019", "Mentor Development, Site Leading", "rohan"],
-			["Rosalind Bump", "MEB 2017", "Curriculum, Outreach", "rosalind"],
-			["Stephanie Liu", "MSE 2018", "Mentor Development, Outreach", "stephanie"],
-			["Tiffany Ma", "MCB 2017", "Curriculum, Site Leading", "tiffany"],
-			["Varun Chhabra", "MechE 2018", "Curriculum", "varun"],
-			["Vicky Zhang", "EECS 2018", "External Affairs, Mentor Development, Site Leading", "vicky"],
-			["Wayne Li", "Chem & CS 2019", "Outreach, Site Leading", "wayne"],
-			["Yessica Wiryawan", "ChemE 2017", "External Affairs", "yessica"],
-			["Zachary Goldstein", "CogSci 2017", "Mentor Development", "zach"]
+        ['Cynthia Lee',
+        'Environmental Sciences, Society & Environment 2018', 'President',
+        'cynthia'],
+        ['Kevin Arifin', 'EECS 2018', 'President', 'kevin'],
+        ['Alexander Orimoloye', 'BioE 2019', 'Outreach, Site Leading',
+        'alexander'],
+       ['Alison Mathews', 'CivE 2019', 'Logistics, Site Leading', 'alison'],
+       ['Annie Ro', 'EECS 2020', 'External Affairs, Outreach', 'annie'],
+       ['Ashlee Heuston', 'EECS 2019', 'Logistics, Site Leading', 'ashlee'],
+       ['Ashley Chen', 'Physics & Art History 2018',
+        'Outreach, Site Leading', 'ashley'],
+       ['Briana Ong', 'IB  2020', 'Logistics, Site Leading', 'briana'],
+       ['Caroline Ba', 'IB & Psychology 2018',
+        'Outreach, External Affairs', 'caroline'],
+       ['Casey Zhang', 'Math & CS 2018', 'Logistics, Site leading',
+        'casey'],
+       ['Claudia Lambert', 'Chemical Biology  2019',
+        'Mentor Dev, Site Leading', 'claudia'],
+       ['Daniela Walls', 'MSE 2019', 'Curriculum, Logistics', 'daniela'],
+       ['Deepika Sarode', 'MCB 2018', 'Curriculum, Logistics', 'deepika'],
+      //  ['Henry Dong', 'CogSci & MCB 2019', 'Mentor Dev, External Affairs',
+        // 'henry'],
+       ['Jeb Boodry', 'ChemE 2020', 'Curriculum', 'jeb'],
+      //  ['Jocelyn Liu', 'MCB 2020', 'Logistics, Site Leading', 'jocelyn'],
+       ['Mai Nojima', 'MCB & Public Health  2019', 'Logistics, Outreach ',
+        'mai'],
+       ['Matthew Sit', 'BioE & EECS 2019', 'Curriculum', 'matt'],
+       ['Miranda Jen', 'Energy Engineering 2019',
+        'Mentor Dev, Site Leading', 'miranda'],
+       ['Nandika Donthi', 'CS 2019', 'External Affairs', 'nandika'],
+       ['Nicole Rasquinha', 'EECS 2018', 'Site Leading', 'nicole'],
+       ['Patrick Zhang', 'CS 2018', 'Outreach', 'patrickz'],
+       ['Patrick Oare', 'Physics & Math 2019', 'Curriculum, Site Leading',
+        'patricko'],
+       ['Pavan Muddukrishna', 'Astrophysics & Applied Math 2018',
+        'Mentor Dev', 'pavan'],
+       ['Rachel Jang', 'ChemE 2019', 'Curriculum, Site Leading', 'rachel'],
+       ['Radu Firtat', 'MCB 2020', 'Outreach', 'radu'],
+       ['Rohan Chakraborty', 'ChemE 2019', 'Site Leading', 'rohan'],
+       ['Ruby Chien', 'MCB 2018', 'Logistics, Outreach', 'ruby'],
+       ['Soumita Bose', 'CogSci & MCB 2018', 'Curriculum, Mentor Dev',
+        'soumita'],
+       ['Soyun Park', 'MCB 2018', 'Menter Dev, Site Leading ', 'soyun'],
+       ['Stephanie Liu', 'MSE 2018', 'Mentor Dev', 'stephanie'],
+       ['Stephanie Huang', 'MCB 2020', 'Curriculum, Site Leading',
+        'stephanieh'],
+       ['Tate Tong', 'ChemE 2019', 'External Affairs', 'tate'],
+       ['Varun Chhabra', 'MechE 2018', 'Curriculum', 'varun'],
+       ['Vicky Zhang', 'EECS 2018', 'Mentor Dev, Site Leading', 'vicky'],
+       ['Wayne Li', 'CS 2018', 'Outreach', 'wayne']
 		  ];
 		  //Categories to sort by. In this case, sort by year.
 		  var sortCategories = [
 			"2017",
 			"2018",
-			"2019"
+			"2019",
+      "2020"
 		  ];
 		  var htmlExpr = '<div class=\"container-row\">';
 
@@ -125,7 +138,7 @@ layout: default
 			  }
 		  }
 		  htmlExpr += '</div>';
-		  document.getElementById("tiles").innerHTML += htmlExpr;
+      document.getElementById("tiles").innerHTML += htmlExpr;
       </script>
     </div>
 </div>
