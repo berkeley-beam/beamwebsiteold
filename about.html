@@ -122,7 +122,7 @@ layout: default
 		  //Loop through each category and display all associated staff for each.
 		  for (var k = 0; k < sortCategories.length; k++) {
 			  for (var i = 0; i < data.length; i++) {
-				  if (data[i][1].toString().includes(sortCategories[k]) || data[i][2].toString().includes(sortCategories[k])) {
+				  if ((data[i][1].toString().includes(sortCategories[k]) || data[i][2].toString().includes(sortCategories[k])) && !htmlExpr.includes(data[i][0])) {
 					  //CSS Setup
 					  htmlExpr += '<div id=\"staff\">';
 					  htmlExpr += '<div id=\"staff-text\">';
