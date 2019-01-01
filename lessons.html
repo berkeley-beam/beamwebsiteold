@@ -71,10 +71,10 @@ layout: default
       html += '<div class="thumbnail">';
       html += '<div class="caption">';
       // All images used here are royalty-free stock photos.
-      html += '<img src="images/featured_final_lessons/' + lessons[i][0] + '.png" style="filter:sepia(0.4); -webkit-filter:sepia(0.4);-moz-filter:sepia(0.4);-ms-filter:sepia(0.4)">';
+      html += '<img src="images/' + lessons[i][0] + '.png" style="filter:sepia(0.4); -webkit-filter:sepia(0.4);-moz-filter:sepia(0.4);-ms-filter:sepia(0.4)">';
       html += '<h3>' + lessons[i][1]+ '</h3>';
       html += '<p>' + lessons[i][2] + '</p>';
-      html += '<p><a id="link" href="lessons_archive/' + lessons[i][0] + '.pdf" target="_blank" class="btn btn-primary" role="button">View</a></p>';
+      html += '<p><a id="link" href="lessons_archive/featured_final_lessons/' + lessons[i][0] + '.pdf" target="_blank" class="btn btn-primary" role="button">View</a></p>';
       html += '</div></div>';
     }
     document.getElementById("final-lesson-container").innerHTML += html;
