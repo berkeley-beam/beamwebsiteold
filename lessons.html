@@ -11,6 +11,7 @@ layout: default
       </p>
   </div>
 </div>
+
 <div class="lesson-container" id="lesson-container">
   <script>
     var lessons = [
@@ -46,3 +47,34 @@ layout: default
     document.getElementById("lesson-container").innerHTML += html;
   </script>
 </div>
+
+<div class="panel even-panel">
+    <center><h1>Final Lessons</h1></center>
+    <div class="content">
+      <p style="font-size: 150%">
+      	Some of our favorite final lessons!
+      </p>
+  </div>
+</div>
+
+<div class="lesson-container" id="final-lesson-container">
+  <script>
+    var lessons = [
+	["a_handful_of_fun", "A Handful of Fun", "Show a handful of applications of bioengineering and prostheses."],
+    ];
+
+    html = "";
+    for (var i = 0; i < lessons.length; i++) {
+      html += '<div class="thumbnail">';
+      html += '<div class="caption">';
+      // All images used here are royalty-free stock photos.
+      html += '<img src="images/' + lessons[i][0] + '.png" style="filter:sepia(0.4); -webkit-filter:sepia(0.4);-moz-filter:sepia(0.4);-ms-filter:sepia(0.4)">';
+      html += '<h3>' + lessons[i][1]+ '</h3>';
+      html += '<p>' + lessons[i][2] + '</p>';
+      html += '<p><a id="link" href="lessons_archive/' + lessons[i][0] + '.pdf" target="_blank" class="btn btn-primary" role="button">View</a></p>';
+      html += '</div></div>';
+    }
+    document.getElementById("final-lesson-container").innerHTML += html;
+  </script>
+</div>
+
