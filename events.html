@@ -1,0 +1,122 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEAM</title>
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/bootstrap.min.js"></script>
+</head>
+
+<div id="banner">
+    <img src="images/banner.jpg" id="header-img">
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="nav-bar-fixed" style="display: none">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-toggle"
+                aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-toggle">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/">Home</a></li>
+                <li><a href="/news">News</a></li>
+                <!--          <li><a href="https://medium.com/@berkeley_beam" target="_blank">Blog</a></li>
+ -->
+                <li><a href="/about">About</a></li>
+                <li><a href="/lessons">Lessons</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<nav class="navbar navbar-default" id="nav-bar">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/">Home</a></li>
+                <li><a href="/">Events</a></li>
+                <li><a href="/news">News</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/lessons">Lessons</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<script>
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > $('#banner').height()) {
+                $('#nav-bar-fixed').show();
+            }
+            if ($(window).scrollTop() < $('#banner').height()) {
+                $('#nav-bar-fixed').hide();
+            }
+        });
+    });
+</script>
+
+<body>
+
+    <body>
+
+        <div class="panel odd-panel">
+            <div class="content">
+                <center>
+                    <h1>Events</h1>
+                </center>
+
+            </div>
+
+        </div>
+        <div style="text-align:center">
+            <iframe src="https://calendar.google.com/calendar/b/2/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;src=YmVhbS5vdXRyZWFjaEBnbWFpbC5jb20&amp;color=%23039BE5" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+            
+              
+
+        </div>
+
+
+        <footer>
+            <div id="foot">
+                Copyright &copy; #### Berkeley Engineers and Mentors.
+                <!-- ASUC Student Union Lead Center requires the follow statement. -->
+                We are a student group acting independently of the University of California.
+                We take full responsibility for our organization and this website.
+            </div>
+
+            <!-- Add current year to copyright statement. -->
+            <script>
+                document.getElementById("foot").innerHTML = document.getElementById("foot").innerHTML.replace("####", new Date().getFullYear());
+            </script>
+        </footer>
+
+    </body>
+
+</html>
+
